@@ -2,19 +2,20 @@ import React from "react";
 
 import "./ExpenseItem.css";
 
-const ExpenseItem = () => {
-    const expenseDate = new Date(2023, 2, 21);
-    const expenseTitle = "Car Insurance";
-    const expenseAmount = 232.3;
+import Card from "./Card";
+import ExpenseDate from "./ExpenseDate"
+
+const ExpenseItem = (props) => {
+    const {title, date, amount} = props.expense;
 
     return (
-        <div className="expense-item">
-            <div>{expenseDate.toISOString()}</div>
+        <Card className="expense-item">
+            <ExpenseDate date={date}/>
             <div className="expense-item__description">
-                <h2>{expenseTitle}</h2>
-                <div className="expense-item__price">${expenseAmount}</div>
+                <h2>{title}</h2>
+                <div className="expense-item__price">${amount}</div>
             </div>
-        </div>
+        </Card>
     );
 }
 

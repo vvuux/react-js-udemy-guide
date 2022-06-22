@@ -1,12 +1,15 @@
+import React from 'react';
+
 import './App.css';
 
-import ExpenseItem from './components/ExpenseItem';
+import Expenses from './components/Expenses';
 
 function App() {
+
   return (
     <>
       <div>
-        <ExpenseItem></ExpenseItem>
+        <Expenses/>
       </div>
     </>
   );
